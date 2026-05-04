@@ -377,9 +377,9 @@ function renderLeaders() {
 
 // ── Ads ────────────────────────────────────────────────
 function startAds() {
-  if (typeof show_9168587 === 'function') {
+  if (typeof show_10960653 === 'function') {
     try {
-      show_9168587({ type:'inApp', inAppSettings:{ frequency:2, capping:0.1, interval:30, timeout:5, everyPage:false }});
+      show_10960653({ type:'inApp', inAppSettings:{ frequency:2, capping:0.1, interval:30, timeout:5, everyPage:false }});
     } catch(e) {}
   } else {
     setTimeout(startAds, 2000);
@@ -396,13 +396,13 @@ function grantReward() {
 }
 
 function showInterstitial() {
-  if (typeof show_9168587 !== 'function') return alert('⏳ Ad not ready yet, please wait...');
-  show_9168587().then(grantReward).catch(() => alert('❌ Ad could not be shown.'));
+  if (typeof show_10960653 !== 'function') return alert('⏳ Ad not ready yet, please wait...');
+  show_10960653().then(grantReward).catch(() => alert('❌ Ad could not be shown.'));
 }
 
 function showPopup() {
-  if (typeof show_9168587 !== 'function') return alert('⏳ Ad not ready yet, please wait...');
-  show_9168587('pop').then(grantReward).catch(() => alert('❌ Ad could not be shown.'));
+  if (typeof show_10960653 !== 'function') return alert('⏳ Ad not ready yet, please wait...');
+  show_10960653('pop').then(grantReward).catch(() => alert('❌ Ad could not be shown.'));
 }
 
 // ── Withdraw ───────────────────────────────────────────
@@ -463,6 +463,6 @@ function haptic(type) {
 </script>
 
 <!-- Ad SDK (loaded last so it doesn't block UI) -->
-<script src="https://libtl.com/sdk.js" data-zone="9168587" data-sdk="show_9168587" async></script>
+<script src="https://libtl.com/sdk.js" data-zone="10960653" data-sdk="show_10960653" async></script>
 </body>
-</html>
+                     </html>
